@@ -12,7 +12,9 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 const app = express();
 configDotenv();
-app.use(cors({ origin: "*", credentials: true }));
+app.use(
+  cors({ origin: "https://mern-yt-clone-kappa.vercel.app", credentials: true })
+);
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("dev"));
